@@ -1,14 +1,14 @@
 class curser {
-  int rectY;
-  int rectW;
-  int rectH;
-  int rectX=0;
-  boolean moving=true;
-  
+  int rectY; // the y-posiont of the curser
+  int rectW; // the width of the cuser
+  int rectH; // the height of the cuser
+  int rectX=0; // the startinf x-position of the cuser
+  boolean moving=true; //makes the curser show while playing
+
   //color
-int r=150;
-int g=147;
-int b=120;
+  int h=150; //the hue of the color
+  int s=147; //the saturation of the color
+  int b=120; //the brightness of the color
 
   curser(int temp_rectY, int temp_rectW, int temp_rectH) {
     rectY=temp_rectY;
@@ -17,10 +17,10 @@ int b=120;
   }
 
   void display() {
-    fill(r,g,b);
-    if(moving==true){
-    rectX=mouseX-rectW/2;
-    rect(rectX, rectY, rectW, rectH);
+    fill(h, s, b);
+    if (moving==true) {
+      rectX=mouseX-rectW/2; //makes the curser move when moving the mouse on the x-axes
+      rect(rectX, rectY, rectW, rectH); //makes the curser
     }
   }
 }

@@ -7,9 +7,9 @@ class blocks {
   boolean G=true;
 
   //color
-  float r=127;
-  float g=147;
-  float b=189;
+  float r=random(30,150);
+  float g=360;
+  float b=360;
 
 
 
@@ -22,18 +22,22 @@ class blocks {
   }
   void display() { 
     colorMode(HSB);
+    float Re=noise(r);
+    fill(r,g,b);
     if (G==true) {
-      //float Re=noise(r);
+     
       //float Gr=noise(g);
       //float Bl=noise(b);
      
-     fill(r,g,b);
+    // fill(r,g,b);
+    
       rect(blockX, blockY, blockW, blockH);
-
-      //r+=Re/9;
+       
+      
       //g+=Gr/9;
       //b+=Bl/9;
     }
+    r+=Re/9;
   }
 
 
@@ -88,7 +92,8 @@ class blocks {
    if(score0.point==50 || ball0.y>height){
      textAlign(CENTER,CENTER);
     text("Game Over",width/2,height/2); 
-    text("click to start over",width/2,height/2-40);
+    text("click to start over",width/2,height/2+40);
+    text(score0.point,width/2,height/2-40);
     ball0.speedx=0;
     ball0.speedy=0;
     score0.playing=false;

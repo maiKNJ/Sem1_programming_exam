@@ -8,9 +8,9 @@ class ball {
   float speedy=startSpeedy;
 
 //color
-float R=120;
-float G=186;
-float B=155;
+float R=250;
+float G=260;
+float B=230;
 
 boolean valid=true;
 
@@ -25,16 +25,16 @@ boolean valid=true;
 
   void display() {
     if(valid==true){
-    float Re=noise(R);
-    float Gr=noise(G);
-    float Bl=noise(B);
+    //float Re=noise(R);
+    //float Gr=noise(G);
+    //float Bl=noise(B);
     
-    fill(R*(Re*3.25),G*(Gr*3.25),B*(Bl*3.25));
+    fill(R,G,B);
     ellipse(x, y, r, r);
     
-  R+=Re/9;
-  G+=Gr/9;
-  B+=Bl/9;
+  //R+=Re/9;
+  //G+=Gr/9;
+  //B+=Bl/9;
     }
   }
 

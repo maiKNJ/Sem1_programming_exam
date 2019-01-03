@@ -4,7 +4,7 @@ score score0;
 ball ball0;
 curser curser0;
 blocks[][] block=new blocks[10][5];
-  SoundFile effect;
+SoundFile effect;
 
 float ballX=width*4;
 float ballY=height*4;
@@ -37,7 +37,7 @@ void setup() {
 }
 
 void draw() {
-  background(#000000);
+  background(60,210,256);
 
   ball0.display();
   ball0.move();

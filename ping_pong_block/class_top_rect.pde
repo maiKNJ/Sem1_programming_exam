@@ -87,7 +87,8 @@ class blocks {
       score0.playing=false; //sets the score to false so it won't show when Game Over
       ball0.valid=false; //sets the ball to false so it won't show when Game Over
       curser0.moving=false; //sets the curser to false so it won't show when Game Over
-    } else if (mousePressed) { // if the mouse is pressed while Game Over the following will happen
+    } 
+    if (mousePressed) { // if the mouse is pressed while Game Over the following will happen
       score0.playing=true; //the score will be shown again
       G=true; //all the blocks will be shown again
       ball0.valid=true; //the ball will be shown again
